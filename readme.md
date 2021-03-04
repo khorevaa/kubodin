@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/khorevaa/kubodin.svg?style=for-the-badge)](https://github.com/khorevaa/kubodin/releases/latest)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=for-the-badge)](/LICENSE.md)
-[![Build status](https://img.shields.io/github/workflow/status/khorevaa/kubodin/build?style=for-the-badge)](https://github.com/khorevaa/kubodin/actions?workflow=releaser)
+[![Build status](https://img.shields.io/github/workflow/status/khorevaa/kubodin/build?style=for-the-badge)](https://github.com/khorevaa/kubodin/actions?workflow=goreleaser)
 [![Codecov branch](https://img.shields.io/codecov/c/github/khorevaa/kubodin/master.svg?style=for-the-badge)](https://codecov.io/gh/khorevaa/kubodin)
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=for-the-badge)](http://godoc.org/github.com/khorevaa/kubodin)
 [![SayThanks.io](https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=for-the-badge)](https://saythanks.io/to/khorevaa)
