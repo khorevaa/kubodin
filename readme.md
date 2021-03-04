@@ -11,9 +11,29 @@
 
 ## Features
 
+* **Not need installed** `rac.exe` 
+* Very **small & fast** app design for kubernetes and docker usage
+* Full API documentation
+
+## Limitings 
+
+* Only for Kubernetes usage
+* Only one 1C.Enterprise server (add on startup), with name `default`
+* Only some allowed API
+  * Infobases (`api/v1/app/default/infobases`)
+    * Create DB
+    * Delete DB
+    * List DB
+  * Cluster (`api/v1/app/default/clusters`)
+    * List cluster
+    * Cluster info
+  * App (`api/v1/app/default`)
+    * Get info
+    * List
+* Only in memory cache
+* Only in memory database
 
 ## Installation
-
 
 
 ## How to use
