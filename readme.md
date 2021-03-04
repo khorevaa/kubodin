@@ -11,9 +11,11 @@
 
 ## Features
 
-* **Not need installed** `rac.exe` 
+* **Not need installed** `rac.exe`
+* Uses **Binary** protocol version `10.0` from 1C.Enterprise
 * Very **small & fast** app design for kubernetes and docker usage
-* Full API documentation
+* Full API documentation for **Odin**. Can see and test.
+* Easy migrate to full version of **Odin** 
 
 ## Limitings 
 
