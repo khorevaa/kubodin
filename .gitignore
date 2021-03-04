@@ -2,7 +2,7 @@
 *.gz
 *.zip
 
-
+api/.sequence
 dist
 .idea
 *.logs

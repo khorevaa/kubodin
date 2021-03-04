@@ -1,11 +1,15 @@
-project_name: app-template
+project_name: kubodin
 
 env:
   - GO111MODULE=on
+  - GOPRIVATE=github.com/khorevaa/ras-client
 #  - GOPROXY=https://goproxy.io
 before:
   hooks:
+    - git config --global url."https://khorevaa:{{ .Env.ACCESS_TOKEN }}@github.com/khorevaa/".insteadOf "https://github.com/khorevaa/"
     - go mod tidy
+    - go get -u github.com/swaggo/swag/cmd/swag
+    - swag init --parseDependency -g ./main.go
 builds:
   - env:
       - CGO_ENABLED=0
@@ -32,25 +36,22 @@ changelog:
       - Merge branch
 dockers:
   - image_templates:
-      - 'khorevaa/{{.ProjectName}}:{{ .Tag }}'
-      - 'khorevaa/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
-      - 'khorevaa/{{.ProjectName}}:latest'
       - 'ghcr.io/khorevaa/{{.ProjectName}}:{{ .Tag }}'
       - 'ghcr.io/khorevaa/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
       - 'ghcr.io/khorevaa/{{.ProjectName}}:latest'
     dockerfile: Dockerfile
     binaries:
-      - app-template
+      - kubodin
     build_flag_templates:
       - "--label=org.label-schema.schema-version=1.0"
       - "--label=org.label-schema.version={{.Version}}"
       - "--label=org.label-schema.name={{.ProjectName}}"
       - "--label=com.github.actions.name={{.ProjectName}}"
-      - "--label=com.github.actions.description=Setup new app-template description"
+      - "--label=com.github.actions.description=API server for Kubernetes & 1C.Enterprise"
       - "--label=com.github.actions.icon=terminal"
       - "--label=com.github.actions.color=blue"
-      - "--label=repository=http://github.com/khorevaa/app-template"
-      - "--label=homepage=http://github.com/khorevaa/app-template"
+      - "--label=repository=http://github.com/khorevaa/kubodin"
+      - "--label=homepage=http://github.com/khorevaa/kubodin"
       - "--label=maintainerAleksey Khorev khorevaa@gmail.com"
 archives:
   - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'

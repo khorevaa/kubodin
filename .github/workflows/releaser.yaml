@@ -23,12 +23,9 @@ jobs:
         name: Docker Login
         if: success() && startsWith(github.ref, 'refs/tags/v')
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "${DOCKER_PASSWORD}" | docker login --username "${DOCKER_USERNAME}" --password-stdin
-          echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
+           echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
@@ -37,6 +34,7 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       -
         name: Clear
         if: always() && startsWith(github.ref, 'refs/tags/v')

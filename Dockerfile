@@ -1,3 +1,3 @@
 FROM scratch
-COPY app-template /
-ENTRYPOINT ["/app-template"]
+COPY kubodin /
+ENTRYPOINT ["/kubodin"]
