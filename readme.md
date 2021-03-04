@@ -14,7 +14,7 @@
 * **Not need installed** `rac.exe`
 * Uses **Binary** protocol version `10.0` from 1C.Enterprise
 * Very **small & fast** app design for kubernetes and docker usage
-* Full API documentation for **Odin**. Can see and test.
+* Full API documentation for **Odin**. Can see and test. `http://localhost:3001/docs`
 * Easy migrate to full version of **Odin** 
 
 ## Limitings 
