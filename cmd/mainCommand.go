@@ -100,7 +100,7 @@ func (c *MainCommand) Flags() []cli.Flag {
 	return []cli.Flag{
 		&cli.StringFlag{
 			Destination: &c.port, Name: "port",
-			Value: "localhost:3001", Usage: "port to listen on"},
+			Value: ":3001", Usage: "port to listen on"},
 		&cli.StringFlag{
 			Destination: &c.appServer, Name: "server",
 			Value: "localhost:1545", Usage: "ras client address with port"},

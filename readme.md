@@ -19,7 +19,12 @@
 ## How to use
 
 ### Docker
+```shell
 
+docker run -p 3001:3001 ghcr.io/khorevaa/kubodin:latest \
+      --port :3001 --server 1cserver:1545
+
+```
 ### Github Release
 
 ## License
