@@ -21,9 +21,9 @@
 * Only one 1C.Enterprise server (add on startup), with name `default`
 * Only some allowed API
   * Infobases (`api/v1/app/default/infobases`)
-    * Create DB
-    * Delete DB
-    * List DB
+    * Create infobase
+    * Delete infobase
+    * List short info of infobases
   * Cluster (`api/v1/app/default/clusters`)
     * List cluster
     * Cluster info
