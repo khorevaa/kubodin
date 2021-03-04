@@ -52,7 +52,7 @@ dockers:
       - "--label=com.github.actions.color=blue"
       - "--label=repository=http://github.com/khorevaa/kubodin"
       - "--label=homepage=http://github.com/khorevaa/kubodin"
-      - "--label=maintainerAleksey Khorev khorevaa@gmail.com"
+      - "--label=maintainer=Aleksey Khorev <khorevaa@gmail.com>"
 archives:
   - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
     replacements:
