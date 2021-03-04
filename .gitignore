@@ -1,0 +1,9 @@
+*.exe
+*.gz
+*.zip
+
+
+dist
+.idea
+*.logs
+
